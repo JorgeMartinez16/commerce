@@ -39,15 +39,13 @@ router.post('/', async(req, res) => {
 //end point patch (recive objetos de forma parcial)
 router.patch('/:id', async (req, res)=>{
    try{
-    const {id}=req.params;
+    const { id }=req.params;
     const body= req.body;
     const product = await service.update(id, body);
     res.json(product)
    } catch (error){
-    res.status(404).json({
-        messsage: error.message});
+    next(error);
    }
-   
 });
 
 //delete
