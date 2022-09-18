@@ -1,8 +1,8 @@
 function logErrors (err, req, res, next){
     console.log('logErrors');
     console.error.apply(err);
-    next(err);
-}
+    next(err); //se le envia error
+} //middleware que captura cualquier error
 
 
 function errorHandler(err, req, res, next){
