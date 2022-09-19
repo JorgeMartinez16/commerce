@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "joi": "^17.6.0",
     "nodemon": "^2.0.19",
     "pg": "^8.8.0"
+  },
+  "engines":{
+    "node": "16.x"
   }
 }
